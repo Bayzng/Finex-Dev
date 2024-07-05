@@ -1,0 +1,124 @@
+.sellerDashboard {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  height: 100%;
+  overflow: hidden;
+}
+
+#sectionOne {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow: scroll;
+  box-sizing: content-box;
+}
+
+#sectionTwo {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow: scroll;
+  box-sizing: content-box;
+}
+
+.walletContent {
+  background-color: indigo;
+  height: 30rem;
+  width: 60rem;
+  /* margin-top: 2rem; */
+  border-radius: 20px;
+}
+
+.--walletContent-header {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.--walletContent-header h1 {
+  text-align: center;
+  padding: 20px;
+  font-size: 2rem;
+  /* margin-top: 5rem; */
+}
+
+.--walletContent-header h3 {
+  text-align: center;
+  /* margin-top: 2rem; */
+}
+
+.--walletContent-btn {
+  margin-top: 1rem;
+  margin-left: 18rem;
+  width: 25rem;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* padding: 4px; */
+  /* background-color: white; */
+}
+
+.--walletContent-wallet {
+  margin-left: 1rem;
+  margin-top: 0.3rem;
+}
+
+.--walletContent-copy {
+  background-color: blue;
+  padding: 7px;
+  width: 7rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+.--walletContent-amount {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.--walletContent-amount h1 {
+  font-size: 3rem;
+}
+
+.--walletContent-content {
+  display: flex;
+  margin-top: 3rem;
+  gap: 7rem;
+  margin-left: 17rem;
+  /* justify-content: space-around; */
+}
+
+.--walletContent-content-header {
+  text-align: center;
+}
+
+.--walletContent-icon {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.--walletContent-transaction {
+  margin-top: 4rem;
+  width: 60rem;
+}
+
+.--walletContent-transaction-netword {
+  display: flex;
+  gap: 30px;
+}
+
+.--walletContent-transaction-headerH2 {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}

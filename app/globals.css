@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.welcometxt {
+  font-size: 5rem;
+  background: linear-gradient(
+    93.42deg,
+    #ffffff 2.82%,
+    #ba92fa 16.22%,
+    #8a51e7 39.21%,
+    #ce72ee 65.34%,
+    #c042ec 85.1%,
+    #c147ed 100%
+  );
+
+  background-clip: text;
+  color: transparent;
+}
+
+.btngrad {
+  background: linear-gradient(95.16deg, #4b13c2 0%, #9421bd 168.89%);
+}
