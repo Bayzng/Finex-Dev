@@ -19,7 +19,8 @@
     "react-dom": "^18",
     "react-router-dom": "^6.24.0",
     "react-toastify": "^10.0.5",
-    "recharts": "^2.12.7"
+    "recharts": "^2.12.7",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@types/node": "^20",

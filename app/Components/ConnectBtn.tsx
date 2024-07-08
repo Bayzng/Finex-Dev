@@ -11,12 +11,19 @@ import "react-toastify/dist/ReactToastify.css";
 import SellerDashboard from "../Dashboards/SellerDashboard/SellerDashboard";
 import "./ConnectBtn.css";
 
+// Define a type for the user information
+interface Web3AuthUser {
+  name: string;
+  email: string;
+}
+
 export default function ConnectBtn() {
   const [smartAccount, setSmartAccount] =
     useState<BiconomySmartAccountV2 | null>(null);
   const [smartAccountAddress, setSmartAccountAddress] = useState<string | null>(
     null
   );
+  const [userName, setUserName] = useState<string | null>(null); // New state for user name
 
   const chains = [
     {
@@ -59,6 +66,9 @@ export default function ConnectBtn() {
 
       await web3auth.initModal();
       const web3authProvider = await web3auth.connect();
+      const user = await web3auth.getUserInfo() as Web3AuthUser; // Fetch user info and cast to Web3AuthUser
+      setUserName(user.name); // Set user name
+
       const ethersProvider = new ethers.providers.Web3Provider(
         web3authProvider as any
       );
@@ -90,9 +100,6 @@ export default function ConnectBtn() {
   return (
     <main className="">
       {!smartAccount && (
-        // <>
-        //   <button className="w-[10rem] h-[3rem] bg-orange-300 text-black font-bold rounded-lg" onClick={connect}>Connect X</button>
-        // </>
         <div className="buyerSignUp">
           <div className="--buyerSignUp-header">
             <h2>Sign Up</h2>
@@ -108,10 +115,6 @@ export default function ConnectBtn() {
 
       {smartAccount && (
         <>
-          {/* {" "}
-          <span className="w-[10rem] h-[3rem] bg-orange-800 text-center pt-3 text-white font-bold rounded-lg">
-            {smartAccountAddress?.slice(0, 8)}...
-          </span> */}
           <SellerDashboard />
         </>
       )}
